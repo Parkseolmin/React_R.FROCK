@@ -1,0 +1,180 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* 투명도를 조정하여 배경을 약간 투명하게 만듦 */
+  backdrop-filter: blur(5px); /* 뒤에 보이는 요소에 블러 효과 적용 */
+  -webkit-backdrop-filter: blur(5px); /* Safari 등의 브라우저를 위한 접두사 */
+  z-index: 10; /* 다른 요소들 위에 위치하도록 z-index 설정 */
+  font-family: "Playfair Display", serif;
+}
+
+.header__wrap {
+  max-width: 1720px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  column-gap: 1.8rem;
+}
+
+.header__menu {
+  display: flex;
+  position: relative;
+}
+
+.header__gnb {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header__gnb > li {
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.header__gnb > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #555;
+}
+
+.header__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  column-gap: 1.2rem;
+}
+
+.header__login > li > span {
+  padding: 0 10px;
+}
+
+.menu__closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  font-size: 2.5rem;
+  display: none;
+}
+.productBtn {
+  position: relative;
+  cursor: pointer;
+}
+
+.productBtn__arrow {
+  position: absolute;
+  top: 9px;
+  right: -14px;
+  font-size: 9px;
+}
+
+.productNav {
+  display: none;
+  position: absolute;
+  top: 120%; /* header의 높이와 동일하게 설정 */
+  left: 100px;
+  width: 100%; /* header의 길이와 동일하게 설정 */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.productNav ul {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around; /* 리스트 아이템 간격 조절 */
+  transition: all 0.3s ease-in-out;
+}
+
+.productNav ul li {
+  list-style: none;
+}
+
+.productNav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.productBtn:hover,
+.productNav {
+  display: flex;
+}
+
+@media screen and (max-width: 1720px) {
+  .header__wrap {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header__wrap {
+    height: 70px;
+    padding: 0 20px;
+  }
+  .header__logo {
+    padding-left: 20px;
+  }
+  .header__gnb {
+    background: #fff;
+    height: 100vh;
+    left: 0;
+    margin-left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    transition: all 0.4s;
+    width: 0;
+  }
+  .header__login {
+    margin-left: 0px;
+  }
+  .header__gnb.gg {
+    overflow: visible;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .menu__closeBtn {
+    display: block;
+  }
+
+  .productNav {
+    height: 100vh;
+    top: 0;
+    left: 150px;
+  }
+  .productNav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 33.5vh 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .header__login {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,39 @@
+/* Category.module.css 또는 Category.css */
+.categoryContainer {
+   display: flex;
+   gap: 60px;
+   width: 100%;
+   justify-content: center;
+}
+
+.categoryImageWrapper {
+   width: 300px;
+   position: relative;
+}
+
+.categoryText {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   font-size: 3rem;
+   color: rgb(223, 143, 143);
+}
+
+.categoryImageWrapper:first-child {
+   margin-left: 60px;
+}
+
+.categoryImage {
+   width: 100%;
+   border-radius: 50px;
+}
+
+/* 화면 크기에 따라 조정 */
+@media (max-width: 768px) {
+   .categoryImageWrapper {
+      width: 200px; /* 더 작은 화면에서는 이미지 크기를 줄입니다. */
+   }
+   .categoryContainer {
+      gap: 30px; /* 간격도 줄입니다. */
+   }
+}
