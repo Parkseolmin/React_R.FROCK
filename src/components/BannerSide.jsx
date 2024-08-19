@@ -25,7 +25,7 @@ export default function BannerSide() {
         slidesPerView={1} // 기본값을 1로 설정
         // navigation={true}
         autoplay={{
-          delay: 15000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         loop={true}
