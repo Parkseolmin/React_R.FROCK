@@ -1,7 +1,7 @@
 # 파지직 TV⚡
 
 <p align="center"><img src="https://github.com/user-attachments/assets/a59ff537-8702-46aa-bc6f-cfca9a9bcd09" alt="F.ROCK로고" width="300"/></p>
-<p align="center">배포 URL : <a href="https://pazizic.vercel.app/" target="_blank">https://pazizic.vercel.app/</a></p>
+<p align="center">배포 URL : <a href="https://react-r-frock.vercel.app/" target="_blank">https://react-r-frock.vercel.app/</a></p>
 <br>
 
 ## 목차
@@ -17,9 +17,7 @@
 
 ## 소개
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/3603089c-cf49-4d31-813b-47bb07506c05" alt="main 페이지" width="32.3%">
-    <img src="https://github.com/user-attachments/assets/8e917464-c6ee-437d-af7b-358ace33d469" alt="todo 페이지" width="32.3%">
-    <img src="https://github.com/user-attachments/assets/403ce321-089b-47d1-89b1-17a29ab27f33" alt="pomodoro 페이지" width="32.3%">
+    <img src="https://github.com/user-attachments/assets/ce7a71f4-b719-41d4-8da5-ac691d46b84d" alt="main 페이지" width="80%">
 </div>
 <br>
 
