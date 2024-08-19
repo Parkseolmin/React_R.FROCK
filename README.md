@@ -1,6 +1,6 @@
 # 파지직 TV⚡
 
-<p align="center"><img src="https://github.com/user-attachments/assets/a59ff537-8702-46aa-bc6f-cfca9a9bcd09" alt="Momentum이미지" width="300"/></p>
+<p align="center"><img src="https://github.com/user-attachments/assets/a59ff537-8702-46aa-bc6f-cfca9a9bcd09" alt="F.ROCK로고" width="300"/></p>
 <p align="center">배포 URL : <a href="https://pazizic.vercel.app/" target="_blank">https://pazizic.vercel.app/</a></p>
 <br>
 
