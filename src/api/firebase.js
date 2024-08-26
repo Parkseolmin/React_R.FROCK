@@ -76,6 +76,17 @@ export async function addNewProduct(product, image) {
   });
 }
 
+// 파이어베이스에서 제품 삭제
+export async function deleteProduct(productId) {
+  try {
+    await remove(ref(database, `products/${productId}`));
+    console.log(`Product with ID ${productId} deleted successfully.`);
+  } catch (error) {
+    console.error('Error deleting product: ' + error.message);
+    throw error; // 에러를 다시 던져 호출한 곳에서 처리할 수 있게 함
+  }
+}
+
 // 파이어베이스에서 모든 제품 불러오기
 export async function getAllProducts() {
   return get(ref(database, 'products')).then((snapshot) => {

@@ -12,7 +12,7 @@ header {
   backdrop-filter: blur(5px); /* 뒤에 보이는 요소에 블러 효과 적용 */
   -webkit-backdrop-filter: blur(5px); /* Safari 등의 브라우저를 위한 접두사 */
   z-index: 10; /* 다른 요소들 위에 위치하도록 z-index 설정 */
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .header__wrap {

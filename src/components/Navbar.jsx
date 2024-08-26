@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
-import { SlLogin, SlLogout } from "react-icons/sl";
-import { IoIosClose } from "react-icons/io";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { IoIosArrowDown } from 'react-icons/io';
+import { SlLogin, SlLogout } from 'react-icons/sl';
+import { IoIosClose } from 'react-icons/io';
 
-import styles from "./Navbar.module.css";
-import User from "./User";
-import CloseButton from "ui/CloseButton";
-import { secondNav } from "data/secondNavData";
-import { useAuthContext } from "context/AuthContext";
-import CartStatus from "./CartStatus";
+import styles from './Navbar.module.css';
+import User from './User';
+import CloseButton from 'ui/CloseButton';
+import { secondNav } from 'data/secondNavData';
+import { useAuthContext } from 'context/AuthContext';
+import CartStatus from './CartStatus';
 
 export default function Navbar() {
   const { user, login, logout } = useAuthContext();
@@ -27,20 +27,20 @@ export default function Navbar() {
           <CloseButton handleClick={handleClick} />
           <div className={styles.header__logo}>
             <h1>
-              <Link to={"/"} className="text-3xl">
+              <Link to={'/'} className='text-3xl'>
                 MOLLEE.
               </Link>
             </h1>
             <ul
               className={`${styles.header__gnb} ${
-                isMenuOpen ? `${styles.gg}` : ""
+                isMenuOpen ? `${styles.gg}` : ''
               }`}
             >
               <span onClick={handleClick} className={styles.menu__closeBtn}>
                 <IoIosClose />
               </span>
               <li>
-                <Link to={"/"}>Home</Link>
+                <Link to={'/'}>Home</Link>
               </li>
               <li onMouseEnter={() => setIsProductHover(true)}>
                 <div className={styles.productBtn}>
@@ -53,9 +53,9 @@ export default function Navbar() {
                     onMouseLeave={() => setIsProductHover(false)}
                   >
                     <ul>
-                      {secondNav.map((item) => {
+                      {secondNav.map((item, index) => {
                         return (
-                          <li key={item.id}>
+                          <li key={item.id + index}>
                             <Link to={item.src}>{item.name}</Link>
                           </li>
                         );
@@ -65,14 +65,14 @@ export default function Navbar() {
                 )}
               </li>
               <li>
-                <Link to={"/"}>Blog</Link>
+                <Link to={'/'}>Blog</Link>
               </li>
               <li>
-                <Link to={"/"}>Contact</Link>
+                <Link to={'/'}>Contact</Link>
               </li>
               {user && user.isAdmin && (
                 <li>
-                  <Link to="/products/new">registration</Link>
+                  <Link to='/products/new'>registration</Link>
                 </li>
               )}
             </ul>
@@ -84,7 +84,7 @@ export default function Navbar() {
               </li> */}
               {user && (
                 <li>
-                  <Link to="/carts">
+                  <Link to='/carts'>
                     <CartStatus />
                   </Link>
                 </li>
@@ -94,13 +94,13 @@ export default function Navbar() {
                 {!user && (
                   <button onClick={login} className={LOGINBTN}>
                     <SlLogin />
-                    <em className="text-sm">login</em>
+                    <em className='text-sm'>login</em>
                   </button>
                 )}
                 {user && (
                   <button onClick={logout} className={LOGINBTN}>
                     <SlLogout />
-                    <em className="text-sm">logout</em>
+                    <em className='text-sm'>logout</em>
                   </button>
                 )}
               </li>
