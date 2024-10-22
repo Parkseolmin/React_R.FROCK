@@ -42,6 +42,7 @@ export default function Products() {
               ? 'border border-gray-400'
               : 'border border-transparent'
           }`}
+          aria-label='Change Grid Layout button'
         >
           <CiGrid2V />
         </button>
@@ -52,6 +53,7 @@ export default function Products() {
               ? 'border border-gray-400'
               : 'border border-transparent'
           }`}
+          aria-label='Change Grid Layout button'
         >
           <CiGrid41 />
         </button>
@@ -62,7 +64,7 @@ export default function Products() {
         className={`${
           gridClass === '2xl:grid-cols-10'
             ? 'grid grid-cols-4 gap-1'
-            : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3'
+            : 'grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3'
         } ${gridClass} p-4`}
       >
         {products &&

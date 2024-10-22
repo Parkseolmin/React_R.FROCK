@@ -19,6 +19,7 @@ export default function ProductCard({
         className={`w-full m-auto ${isLargeGrid ? 'p-0' : 'p-8'} sm:p-0`}
         src={image}
         alt={title}
+        loading='lazy'
       ></img>
       {/* isLargeGrid가 false일 때만 아래의 정보를 보여줌 */}
       {!isLargeGrid && (

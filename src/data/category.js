@@ -1,20 +1,26 @@
 export const images = [
   {
-    src: "/image/fashion05.jpg",
+    src: '/image/fashion05.jpg',
+    title: 'MarqueeImage',
   },
   {
-    src: "/image/jacketCategory.jpg",
+    src: '/image/jacketCategory.jpg',
+    title: 'MarqueeImage',
   },
   {
-    src: "/image/pantsCategory.jpg",
+    src: '/image/pantsCategory.jpg',
+    title: 'MarqueeImage',
   },
   {
-    src: "/image/fashion05.jpg",
+    src: '/image/fashion05.jpg',
+    title: 'MarqueeImage',
   },
   {
-    src: "/image/perfumeCategory.jpg",
+    src: '/image/perfumeCategory.jpg',
+    title: 'MarqueeImage',
   },
   {
-    src: "/image/marquee04.jpg",
+    src: '/image/marquee04.jpg',
+    title: 'MarqueeImage',
   },
 ];

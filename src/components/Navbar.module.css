@@ -33,6 +33,8 @@ header {
 .header__menu {
   display: flex;
   position: relative;
+  height: 49px;
+  width: 150.85px;
 }
 
 .header__gnb {
@@ -90,17 +92,19 @@ header {
   position: absolute;
   top: 120%; /* header의 높이와 동일하게 설정 */
   left: 100px;
-  width: 100%; /* header의 길이와 동일하게 설정 */
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
+  border-radius: 25px;
 }
 
 .productNav ul {
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: space-around; /* 리스트 아이템 간격 조절 */
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -110,8 +114,12 @@ header {
 
 .productNav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
+}
+
+.productNav ul li a:hover {
+  color: #c2c2c2;
 }
 
 .productBtn:hover,
@@ -165,6 +173,8 @@ header {
     height: 100vh;
     top: 0;
     left: 150px;
+    border-radius: 0px;
+    width: 100%;
   }
   .productNav ul {
     flex-direction: column;

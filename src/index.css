@@ -187,6 +187,10 @@ input {
   color: #fff;
 }
 
+.slideItem span {
+  color: white;
+}
+
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 1 !important;
@@ -220,8 +224,12 @@ input {
   transition: all 0.2s ease-in-out;
 }
 
-.categoriesBtn:hover {
+.slideItem:hover .categoriesBtn {
   filter: brightness(100%);
+}
+
+.slideItem:hover > span {
+  color: #1c1c1c;
 }
 
 footer {

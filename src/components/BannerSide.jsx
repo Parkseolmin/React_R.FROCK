@@ -59,7 +59,7 @@ export default function BannerSide() {
                   alt={banner.title}
                   style={{
                     objectFit: 'cover',
-                    width: '1000px',
+                    width: '800px',
                     height: 'auto',
                   }}
                 />
@@ -87,7 +87,7 @@ export default function BannerSide() {
           position: 'absolute',
           fontSize: '1rem',
           color: `rgba(0,0,0,0)`,
-          top: '70%',
+          top: '60%',
           right: '0%',
           transform: `rotate(-90deg)`,
           WebkitTextStroke: `2px black`,
@@ -101,7 +101,7 @@ export default function BannerSide() {
           position: 'absolute',
           fontSize: '1rem',
           color: `rgba(0,0,0,0)`,
-          top: '90%',
+          top: '85%',
           right: '0%',
           transform: `rotate(-90deg)`,
           WebkitTextStroke: `2px black`,

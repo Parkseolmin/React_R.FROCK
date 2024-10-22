@@ -24,22 +24,21 @@ export default function ProductDetail() {
   const handleClick = (e) => {
     if (!user) {
       login();
-    } else {
-      const product = {
-        id,
-        image,
-        title,
-        price,
-        option: selected,
-        quantity: 1,
-      };
-      addOrUpdateItem.mutate(product, {
-        onSuccess: () => {
-          setSuccess('장바구니에 추가되었습니다.');
-          setTimeout(() => setSuccess(null), 2000);
-        },
-      });
     }
+    const product = {
+      id,
+      image,
+      title,
+      price,
+      option: selected,
+      quantity: 1,
+    };
+    addOrUpdateItem.mutate(product, {
+      onSuccess: () => {
+        setSuccess('장바구니에 추가되었습니다.');
+        setTimeout(() => setSuccess(null), 2000);
+      },
+    });
   };
   const handleDelete = async () => {
     try {
