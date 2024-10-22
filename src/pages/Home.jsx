@@ -10,7 +10,7 @@ export default function Home() {
     <section className='sectionContents'>
       <BannerSide />
       <SlideImage />
-      <Banner />
+      {/* <Banner /> */}
       <Category />
       <Products />
     </section>

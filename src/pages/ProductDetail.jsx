@@ -10,7 +10,7 @@ import SuccessAlert from 'ui/SuccessAlert';
 import { formatPrice } from 'util/number';
 
 export default function ProductDetail() {
-  const { user } = useAuthContext();
+  const { user, login } = useAuthContext();
   const { addOrUpdateItem } = useCart();
   const {
     state: {
@@ -20,15 +20,26 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const [success, setSuccess] = useState();
   const [selected, setSelected] = useState(options && options[0]);
-  const handleSelect = (e) => setSelected(e.target.value);
+  const handleSelect = (option) => setSelected(option);
   const handleClick = (e) => {
-    const product = { id, image, title, price, option: selected, quantity: 1 };
-    addOrUpdateItem.mutate(product, {
-      onSuccess: () => {
-        setSuccess('장바구니에 추가되었습니다.');
-        setTimeout(() => setSuccess(null), 2000);
-      },
-    });
+    if (!user) {
+      login();
+    } else {
+      const product = {
+        id,
+        image,
+        title,
+        price,
+        option: selected,
+        quantity: 1,
+      };
+      addOrUpdateItem.mutate(product, {
+        onSuccess: () => {
+          setSuccess('장바구니에 추가되었습니다.');
+          setTimeout(() => setSuccess(null), 2000);
+        },
+      });
+    }
   };
   const handleDelete = async () => {
     try {

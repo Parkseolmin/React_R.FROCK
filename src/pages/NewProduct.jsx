@@ -31,26 +31,51 @@ export default function NewProduct() {
     }
     setProduct((product) => ({ ...product, [name]: value }));
   };
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setIsUploading(true);
+  //   uploadImage(file) //
+  //     .then((url) => {
+  //       addProduct.mutate(
+  //         { product, url },
+  //         {
+  //           onSuccess: () => {
+  //             setSuccess('성공적으로 제품이 추가되었습니다.');
+  //             setTimeout(() => {
+  //               setSuccess(null);
+  //             }, 2000);
+  //             setProduct({});
+  //             setFile(undefined);
+  //           },
+  //         }
+  //       );
+  //     })
+  //     .finally(() => setIsUploading(false));
+  // };
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsUploading(true);
-    uploadImage(file) //
-      .then((url) => {
-        addProduct.mutate(
-          { product, url },
-          {
-            onSuccess: () => {
-              setSuccess('성공적으로 제품이 추가되었습니다.');
-              setTimeout(() => {
-                setSuccess(null);
-              }, 2000);
-              setProduct({});
-              setFile(undefined);
-            },
-          }
-        );
-      })
-      .finally(() => setIsUploading(false));
+
+    try {
+      const url = await uploadImage(file);
+      addProduct.mutate(
+        { product, url },
+        {
+          onSuccess: () => {
+            setSuccess('성공적으로 제품이 추가되었습니다.');
+            setTimeout(() => {
+              setSuccess(null);
+            }, 2000);
+            setProduct({});
+            setFile(undefined);
+          },
+        }
+      );
+    } catch (error) {
+      console.error('제품 등록에 실패했습니다.', error);
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   const triggerFileInput = () => {
