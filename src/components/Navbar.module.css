@@ -33,8 +33,6 @@ header {
 .header__menu {
   display: flex;
   position: relative;
-  height: 49px;
-  width: 150.85px;
 }
 
 .header__gnb {

@@ -98,6 +98,10 @@ input {
   border-bottom: 1px solid rgb(212, 212, 212);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 // .container-box {
 //   position: relative;
 //   width: 100%;

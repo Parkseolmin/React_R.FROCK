@@ -1,9 +1,7 @@
-// import { addOrUpdateToCart } from "api/firebase";
-// import { useAuthContext } from "context/AuthContext";
 import { deleteProduct } from 'api/firebase';
 import { useAuthContext } from 'context/AuthContext';
 import { useCart } from 'hooks/useCart';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from 'ui/Button';
 import SuccessAlert from 'ui/SuccessAlert';
@@ -20,10 +18,19 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const [success, setSuccess] = useState();
   const [selected, setSelected] = useState(options && options[0]);
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => setQuantity((prev) => prev + 1);
+  const decreaseQuantity = () => {
+    if (quantity > 1) setQuantity((prev) => prev - 1);
+  };
+
   const handleSelect = (option) => setSelected(option);
-  const handleClick = (e) => {
+
+  const handleClick = () => {
     if (!user) {
       login();
+      return;
     }
     const product = {
       id,
@@ -31,7 +38,7 @@ export default function ProductDetail() {
       title,
       price,
       option: selected,
-      quantity: 1,
+      quantity,
     };
     addOrUpdateItem.mutate(product, {
       onSuccess: () => {
@@ -46,11 +53,15 @@ export default function ProductDetail() {
       setSuccess('해당 제품 삭제완료');
       setTimeout(() => {
         navigate('/'); // 홈으로 리다이렉트
-      }, 2000); // 2초 후에 리다이렉트
+      }, 1000); // 2초 후에 리다이렉트
     } catch (error) {
       console.error('Error deleting product:', error);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className='sectionContents'>
@@ -65,6 +76,25 @@ export default function ProductDetail() {
             {formatPrice(price)}원
           </p>
           <p className='py-4 text-lg'>{description}</p>
+          {/* 상품 갯수  */}
+          <div className='flex items-center gap-4 py-4'>
+            <p>수량:</p>
+            <button
+              onClick={decreaseQuantity}
+              className='px-4 py-2 border rounded bg-gray-200'
+              disabled={quantity === 1}
+            >
+              -
+            </button>
+            <span>{quantity}</span>
+            <button
+              onClick={increaseQuantity}
+              className='px-4 py-2 border rounded bg-gray-200'
+            >
+              +
+            </button>
+          </div>
+          {/* 상품 갯수  */}
           <div className='flex items-center gap-4'>
             <p>옵션:</p>
             <div className='flex flex-wrap'>

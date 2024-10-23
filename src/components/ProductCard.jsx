@@ -23,7 +23,7 @@ export default function ProductCard({
       ></img>
       {/* isLargeGrid가 false일 때만 아래의 정보를 보여줌 */}
       {!isLargeGrid && (
-        <div className='text-center pb-5'>
+        <div className='text-center pb-3'>
           <div className='mt-2 px-2 text-sm flex flex-col gap-2'>
             <p className='mt-2 px-2 text-gray-600 text-lg  font-Playfair'>
               {category}
