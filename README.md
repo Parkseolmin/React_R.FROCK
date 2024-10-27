@@ -102,10 +102,5 @@ Firebase를 활용한 로그인 및 데이터베이스 구현 경험은 백엔�
 <br>
 <br>
 
-## 프로젝트 회고록 보러가기
-<div display="flex" flexdirection="column">
-    <p>[Blog 글 보러가기]</p>
-<a href="https://snowman-seolmini.tistory.com/84" target="_blank">
-<img width="330" alt="profile" src="https://github.com/user-attachments/assets/40d8b6b5-2a4d-419e-b484-16f369f0e6f9"/>
-</a>
-</div>
+## 프로젝트 회고 & 기록 진 보러가기
+- [ver1.0.0 Blog 글 보러가기](https://snowman-seolmini.tistory.com/85)
