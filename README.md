@@ -16,9 +16,9 @@
 <br>
 
 ## 소개
-<div align="center">
+<p align="center">
     <img src="https://github.com/user-attachments/assets/ce7a71f4-b719-41d4-8da5-ac691d46b84d" alt="main 페이지" width="80%">
-</div>
+</p>
 <br>
 
 파지직TV는 현대 웹 개발의 핵심 기술들을 실제 프로젝트에 적용하며 깊이 있게 이해하고자 만들어진 Youtube 영상 사이트입니다. 이 프로젝트의 주요 목적은 다음과 같습니다:
