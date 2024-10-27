@@ -16,7 +16,10 @@
 <br>
 
 ## 소개
-![-Clipchamp5-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/24f3e5a0-cab6-4eac-bae8-7e6ee22a7403)
+<div align="center">
+<img width="80%" alt="frock1" src="https://github.com/user-attachments/assets/de3abccd-aad5-4f25-b4fc-70ab2fef3a52">
+<img width="80%" alt="frock2" src="https://github.com/user-attachments/assets/e5fb0b94-fec2-4edf-8956-4c16661a9faf">
+</div>
 <br>
 
 파지직TV는 현대 웹 개발의 핵심 기술들을 실제 프로젝트에 적용하며 깊이 있게 이해하고자 만들어진 Youtube 영상 사이트입니다. 이 프로젝트의 주요 목적은 다음과 같습니다:
