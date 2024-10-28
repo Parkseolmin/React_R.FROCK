@@ -1,4 +1,4 @@
-# 파지직 TV⚡
+# F.ROCK 쇼핑몰
 
 <p align="center"><img src="https://github.com/user-attachments/assets/a59ff537-8702-46aa-bc6f-cfca9a9bcd09" alt="F.ROCK로고" width="300"/></p>
 <p align="center">배포 URL : <a href="https://react-r-frock.vercel.app/" target="_blank">https://react-r-frock.vercel.app/</a></p>
