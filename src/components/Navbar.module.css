@@ -55,6 +55,9 @@ header {
 }
 
 .header__login {
+  position: absolute;
+  top: -20px;
+  right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,6 +133,10 @@ header {
     max-width: 100%;
     padding: 0 30px;
   }
+  .header__login {
+    margin-left: 0px;
+    right: 20px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -153,7 +160,9 @@ header {
   }
   .header__login {
     margin-left: 0px;
+    right: 0px;
   }
+
   .header__gnb.gg {
     overflow: visible;
     width: 150px;

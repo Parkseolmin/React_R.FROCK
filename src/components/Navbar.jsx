@@ -79,9 +79,6 @@ export default function Navbar() {
           </div>
           <nav className={styles.header__menu}>
             <ul className={styles.header__login}>
-              {/* <li>
-                <Link to={"/products"}>All Products</Link>
-              </li> */}
               {user && (
                 <li>
                   <Link to='/carts'>

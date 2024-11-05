@@ -3,6 +3,7 @@ import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './assets/scss/style.scss';
+import MyOrder from 'pages/MyOrder';
 
 // Lazy loading components
 const App = lazy(() => import('./App'));
@@ -26,6 +27,14 @@ const router = createBrowserRouter([
       { path: '/products', element: <AllProducts /> }, // 전체 제품
       { path: '/products/category/:categoryId', element: <Category /> }, // 카테고리별 제품
       { path: '/products/:id', element: <ProductDetail /> }, // 제품 상세 페이지
+      {
+        path: '/orders',
+        element: (
+          <ProtectedRoute>
+            <MyOrder />
+          </ProtectedRoute>
+        ),
+      },
       {
         path: '/carts',
         element: (
