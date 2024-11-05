@@ -114,3 +114,8 @@ export async function addOrUpdateToCart(userId, product) {
 export async function removeFromCart(userId, productId) {
   return remove(ref(database, `carts/${userId}/${productId}`));
 }
+
+// 쇼핑카트에 있는 모든 제품 삭제하기
+export async function allRemoveFromCart(userId) {
+  return remove(ref(database, `carts/${userId}`));
+}

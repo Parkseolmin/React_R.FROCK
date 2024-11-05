@@ -102,6 +102,20 @@ input {
   display: none;
 }
 
+/* 예제 CSS */
+.modal {
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
 // .container-box {
 //   position: relative;
 //   width: 100%;
