@@ -1,6 +1,6 @@
-import { deleteProduct } from 'api/firebase';
 import { useAuthContext } from 'context/AuthContext';
 import { useCart } from 'hooks/useCart';
+import { useProducts } from 'hooks/useProducts';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Button from 'ui/Button';
@@ -10,6 +10,7 @@ import { formatPrice } from 'util/number';
 export default function ProductDetail() {
   const { user, login } = useAuthContext();
   const { addOrUpdateItem } = useCart();
+  const { deleteProduct } = useProducts(); // 삭제 훅 추가
   const {
     state: {
       product: { id, image, title, description, category, price, options },
@@ -48,15 +49,14 @@ export default function ProductDetail() {
     });
   };
   const handleDelete = async () => {
-    try {
-      await deleteProduct(id);
-      setSuccess('해당 제품 삭제완료');
-      setTimeout(() => {
-        navigate('/'); // 홈으로 리다이렉트
-      }, 1000); // 2초 후에 리다이렉트
-    } catch (error) {
-      console.error('Error deleting product:', error);
-    }
+    deleteProduct.mutate(id, {
+      onSuccess: () => {
+        setSuccess('해당 제품 삭제 완료');
+        setTimeout(() => {
+          navigate('/'); // 홈으로 리다이렉트
+        }, 1000);
+      },
+    });
   };
 
   useEffect(() => {
